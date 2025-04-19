@@ -67,9 +67,9 @@
         function changeLanguage() {
             var language = document.getElementById("languageSelect").value;
             if (language === "english") {
-                window.location.href = "en.html";  // English page
+                window.location.href = "maineng.html";  
             } else if (language === "azerbaijani") {
-                window.location.href = "az.html";  // Azerbaijani page
+                window.location.href = "main.html";  
             }
         }
 
@@ -78,9 +78,9 @@
             var button = document.getElementById("submitButton");
 
             if (language === "azerbaijani") {
-                button.innerHTML = "Get";  // Change button text for Azerbaijani
+                button.innerHTML = "Get";  
             } else {
-                button.innerHTML = "Go";  // Default button text for English
+                button.innerHTML = "Go";  
             }
         }
     </script>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Əsas Menyu</title>
+    <style>
+        body {
+            background-color: #9e4ae8;
+            color: white;
+        }
+    </style>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <style>
+          h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: white;
+          }
+        </style>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+      <style>
+        h2 {
+          font-family: 'Poppins', sans-serif;
+          font-size: 36px;
+          font-weight: 600;
+          color: white;
+        }
+      </style>
+        <style>
+            .star-rating {
+              display: flex;
+              justify-content: center;
+              direction: ltr;
+            }
+        
+            .star {
+              font-size: 30px;
+              color: #ccc;
+              cursor: pointer;
+              transition: color 0.2s;
+            }
+        
+            .star:hover,
+            .star:hover ~ .star {
+              color: #FFD700;
+            }
+        
+            .star.selected,
+            .star.selected ~ .star {
+              color: #FFD700;
+            }
+          </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Etibar</div>
+        <ul class="nav-links">
+          <li><a href="main.html">Əsas Menyu</a></li>
+          <li><a href="aboutme.html">Haqqımda</a></li>
+          <li><a href="contact.html">Əlaqə</a></li>
+        </ul>
+      </nav>
+      
+      <style>
+        .navbar {
+          background-color: #2d2d2d;
+          color: white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 40px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+          position: sticky;
+          top: 0;
+          z-index: 100;
+        }
+      
+        .logo {
+          font-size: 22px;
+          font-weight: bold;
+        }
+      
+        .nav-links {
+          list-style: none;
+          display: flex;
+          gap: 25px;
+          margin: 0;
+          padding: 0;
+        }
+      
+        .nav-links a {
+          text-decoration: none;
+          color: white;
+          font-size: 16px;
+          transition: color 0.3s;
+        }
+      
+        .nav-links a:hover {
+          color: #a08eff;
+        }
+      </style>
+      <H1 style="text-align: center; margin-bottom: 0px;">Xoş Gəlmişsiniz!</H1>
+      <h2 style="text-align: center; margin-top: 0px;">Dil Bilgisi:</h2>
+      <div class="button-container">
+        <a href="aboutme.html" class="custom-button">
+          Haqqımda <span class="arrow">→</span>
+        </a>
+      </div>
+      
+      <style>
+        .button-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 3vh; 
+        }
+      
+        .custom-button {
+          display: inline-flex;
+          align-items: center;
+          padding: 8px 15px;
+          background-color: #007bff; 
+          color: white;
+          font-size: 14px; 
+          font-weight: bold;
+          border-radius: 25px; 
+          text-decoration: none;
+          transition: background-color 0.3s, transform 0.2s;
+        }
+      
+        .custom-button:hover {
+          background-color: #0056b3; 
+          transform: scale(1.05);
+        }
+      
+        .arrow {
+          margin-left: 2px; 
+          font-size: 16px;
+          transition: margin-left 0.3s;
+        }
+      
+        .custom-button:hover .arrow {
+          margin-left: 2px; 
+        }
+      </style>
+      <style>
+        .cards-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 40px;
+          margin-top: 40px;
+          flex-wrap: wrap;
+        }
+    
+        .card-container {
+          width: 160px;
+          height: 220px;
+          perspective: 1000px;
+          position: relative;
+        }
+    
+        .card {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          transform-style: preserve-3d;
+          transition: transform 0.6s;
+        }
+    
+        .card:hover {
+          transform: rotateY(180deg);
+        }
+    
+        .card-front, .card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 15px;
+          backface-visibility: hidden;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-size: 20px;
+          padding: 10px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+          top: 0;
+          left: 0;
+        }
+    
+        .card-front img {
+          width: 36px;
+          height: 24px;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          border-radius: 6px;
+          object-fit: cover;
+        }
+    
+        .card-back {
+          background-color: #333;
+          transform: rotateY(180deg);
+          font-size: 18px;
+        }
+    
+        .english { background-color: #1E90FF; }
+        .turkish { background-color: #E60000; }
+        .azerbaijani { background-color: #228B22; }
+      </style>
+    </head>
+    <body>
+      <div class="cards-wrapper">
+        <div class="card-container">
+          <div class="card">
+            <div class="card-front english">
+              English
+              <img src="https://flagcdn.com/w40/gb.png" alt="UK Flag">
+            </div>
+            <div class="card-back">
+              Level: B2
+            </div>
+          </div>
+        </div>
+    
+        <div class="card-container">
+          <div class="card">
+            <div class="card-front turkish">
+              Türkçe
+              <img src="https://flagcdn.com/w40/tr.png" alt="TR Flag">
+            </div>
+            <div class="card-back">
+              Seviye: C1
+            </div>
+          </div>
+        </div>
+    
+        <div class="card-container">
+          <div class="card">
+            <div class="card-front azerbaijani">
+              Azərbaycanca
+              <img src="https://flagcdn.com/w40/az.png" alt="AZ Flag">
+            </div>
+            <div class="card-back">
+              Səviyyə: Native
+            </div>
+          </div>
+        </div>
+      </div>
+    </style>
+    <h2>Rəylərinizi Yazın</h2>
+<div class="yorum-form">
+  <label for="isim">Adınız:</label><br>
+  <input type="text" id="isim" placeholder="Adınızı yazın" required><br>
+
+  <label for="yildiz">Ulduz verin:</label><br>
+  <div class="yildizlar" id="yildiz">
+    <span data-index="1" class="yildiz">&#9733;</span>
+    <span data-index="2" class="yildiz">&#9733;</span>
+    <span data-index="3" class="yildiz">&#9733;</span>
+    <span data-index="4" class="yildiz">&#9733;</span>
+    <span data-index="5" class="yildiz">&#9733;</span>
+  </div><br>
+
+  <label for="yorum">Rəyiniz:</label><br>
+  <textarea id="yorum" placeholder="Rəyinizi yazın" required></textarea><br><br>
+
+  <button onclick="yorumEkle()">Rəyi Göndər</button>
+</div>
+
+<h3>Rəylər</h3>
+<div id="yorumlar-alani">
+</div>
+
+<script>
+  let secilenYildiz = 0;
+
+  document.querySelectorAll('.yildizlar .yildiz').forEach(star => {
+    star.addEventListener('mouseover', function() {
+      document.querySelectorAll('.yildizlar .yildiz').forEach(s => s.classList.remove('secilmis'));
+      for (let i = 0; i < this.dataset.index; i++) {
+        document.querySelectorAll('.yildizlar .yildiz')[i].classList.add('secilmis');
+      }
+    });
+
+    star.addEventListener('click', function() {
+      secilenYildiz = this.dataset.index;
+      document.querySelectorAll('.yildizlar .yildiz').forEach(s => s.classList.remove('secilmis'));
+      for (let i = 0; i < secilenYildiz; i++) {
+        document.querySelectorAll('.yildizlar .yildiz')[i].classList.add('secilmis');
+      }
+    });
+
+    star.addEventListener('mouseout', function() {
+      if (secilenYildiz > 0) {
+        document.querySelectorAll('.yildizlar .yildiz').forEach(s => s.classList.remove('secilmis'));
+        for (let i = 0; i < secilenYildiz; i++) {
+          document.querySelectorAll('.yildizlar .yildiz')[i].classList.add('secilmis');
+        }
+      }
+    });
+  });
+
+  function yorumEkle() {
+    const isim = document.getElementById('isim').value;
+    const yorum = document.getElementById('yorum').value;
+
+    if (isim && yorum && secilenYildiz > 0) {
+      const yeniYorum = document.createElement('div');
+      yeniYorum.classList.add('yorum');
+      yeniYorum.innerHTML = `
+        <p><strong>${isim}</strong> (${secilenYildiz} Ulduz)</p>
+        <p>${yorum}</p>
+        <button class="sil-button" onclick="yorumSil(this)">Sil</button>
+      `;
+
+      document.getElementById('yorumlar-alani').prepend(yeniYorum);
+
+      // Formu sıfırlama
+      document.getElementById('isim').value = '';
+      document.getElementById('yorum').value = '';
+      secilenYildiz = 0;
+      document.querySelectorAll('.yildizlar .yildiz').forEach(s => {
+        s.classList.remove('secilmis');
+      });
+    } else {
+      alert("Xahiş olunur, adınızı, rəylərinizi və ulduz seçiminizi edin.");
+    }
+  }
+
+  function yorumSil(button) {
+    button.parentElement.remove();
+  }
+</script>
+
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #9e4ae8; 
+    padding: 30px;
+    margin: 0;
+    color: #333;
+  }
+
+  h2, h3 {
+    color: #333;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .yorum-form {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .yorum-form input,
+  .yorum-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .yorum-form textarea {
+    height: 120px;
+  }
+
+  .yildizlar .yildiz {
+    font-size: 40px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+
+  .yildizlar .yildiz.secilmis {
+    color: #ffcc00; 
+  }
+
+  .yildizlar .yildiz:hover {
+    color: #ffcc00;
+    transform: scale(1.2);
+  }
+
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  #yorumlar-alani {
+    margin-top: 40px;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+
+  .yorum {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .yorum p {
+    font-size: 16px;
+    color: #555;
+  }
+
+  .yorum p strong {
+    color: #333;
+  }
+
+  .sil-button {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+
+  .sil-button:hover {
+    background-color: #e53935;
+  }
+</style>
+
+    </body>
+ </html>
